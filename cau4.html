@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình tròn</title>
+</head>
+<body>
+<canvas id="circle" width="400" height="400" style="border: 1px solid red"></canvas>
+<script>
+    class Circle {
+        x;
+        y;
+        radius;
+        color;
+
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius
+        }
+
+        draw() {
+            let cavas = document.getElementById("circle");
+            let ctx = cavas.getContext("2d");
+            ctx.fillStyle = "#000000";
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
+            ctx.fill()
+        }
+
+    }
+
+    let circle1 = new Circle(50, 50, 80 )
+    circle1.draw()
+</script>
+</body>
+</html>
